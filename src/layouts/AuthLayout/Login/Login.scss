@@ -1,0 +1,130 @@
+.login-content_container {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  background-image: url("../../../assets/Loginbackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  font-size: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 4rem 8rem 6rem 8rem;
+
+  .left_content {
+    width: 50%;
+    .left_content-logo {
+      margin: 0 0 -20px -80px;
+    }
+    p {
+      margin-top: 3rem;
+      margin-left: -5rem;
+    }
+  }
+
+  .right_content {
+    text-align: center;
+    margin-top: 15rem;
+
+    .right_content-input {
+      width: 600px;
+      height: 60px;
+      color: #ffffff;
+      opacity: 0.7;
+      font-size: 21px;
+      padding: 2rem 0;
+      margin: 1rem 0;
+      outline: none;
+      border-color: transparent;
+      border-bottom: 1px solid #ffffff;
+      background: transparent;
+    }
+
+    .right_content-input:focus {
+      outline: none;
+    }
+
+    .right_content-input::-webkit-input-placeholder {
+      font-size: 21px;
+      color: #ffffff;
+      opacity: 0.7;
+    }
+
+    .right_content-login-button {
+      width: 600px;
+      height: 60px;
+      color: #ffffff;
+      border-radius: 10px;
+      background-color: #2522ca;
+      border: none;
+      font-size: 21px;
+      font-weight: 600;
+      margin: 2rem 0 2rem 0;
+      cursor: pointer;
+    }
+
+    .right_content-login-button:hover {
+      background-color: #14119a;
+      transition: background-color 1s;
+    }
+
+    .right_content-checkbox {
+      font-size: 16px;
+      margin-left: 1rem;
+    }
+
+    .right_content-links {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    .right_content-account {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 6rem;
+    }
+
+    .right_content-custom-dash {
+      color: #ffffff;
+      font-size: 16px;
+      margin: 2rem 0;
+    }
+
+    .right_content-button {
+      button {
+        color: #ffffff;
+        width: 220px;
+        height: 42px;
+        background-color: transparent;
+        border-radius: 10px;
+        margin: 2rem 7rem;
+        border-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: #ffffff2e;
+        transition: background-color 1s;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .icon-img {
+        width: 24px;
+        height: 24px;
+        margin: 0 1rem 0 -1rem;
+      }
+    }
+
+    .right_content-text {
+      margin-top: 2rem;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+  }
+}

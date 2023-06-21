@@ -1,0 +1,173 @@
+.content__container {
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 9rem;
+
+  .content__price {
+    border: 2px solid #000000;
+    border-radius: 6px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    &-text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+
+      h3 {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .content__button {
+    background-color: #2522ca;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 0;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .content__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-item {
+      background: #ffffff;
+      border: 2px solid #2522ca;
+      border-radius: 10px;
+      color: #2522ca;
+      text-align: center;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 120px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #2522ca;
+        color: white;
+      }
+
+      svg {
+        font-size: 2rem;
+      }
+
+      &-text {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.content__flex {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  .content__flex-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .content__flex-right {
+    width: 65%;
+  }
+  .content__search {
+    & form {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 1.5rem;
+      border: 1px solid #000000;
+      border-radius: 6px;
+      padding: 1.5rem;
+      width: 365px;
+      margin-bottom: 2rem;
+    }
+
+    &-label {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    &-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      width: 100%;
+
+      input {
+        align-self: flex-end;
+        width: 150px;
+        height: 30px;
+        padding: 10px;
+
+        &:hover {
+          border-color: #000000;
+        }
+      }
+    }
+
+    &-button {
+      text-align: center;
+      width: 100%;
+      font-size: 15px;
+      background-color: #2522ca;
+      border: none;
+      border-radius: 5px;
+      color: #ffffff;
+      padding: 10px;
+      margin-top: 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+      font-size: 15px;
+      height: 12px;
+      font-weight: 300;
+    }
+
+    .css-wb57ya-MuiFormControl-root-MuiTextField-root {
+      display: flex;
+      align-items: center;
+    }
+
+    .MuiFormLabel-root {
+      // display: none;
+      color: #000000;
+    }
+  }
+}
+
+.active {
+  background-color: #2522ca !important;
+  color: white !important;
+}
+
+.css-ki1hdl-MuiAlert-action {
+  display: none !important;
+}

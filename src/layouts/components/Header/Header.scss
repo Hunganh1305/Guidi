@@ -1,0 +1,163 @@
+.header__container {
+  background-image: url("../../../assets/carousel.png");
+  height: fit-content;
+  padding: 0rem 1.25rem 1.5rem;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  padding-bottom: 4.5rem;
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: #d9d9d9 1px solid;
+    padding: 15px 0;
+
+    &-logo {
+      width: 180px;
+      height: 41px;
+      object-fit: contain;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      border: 1px solid #ffffff;
+      border-radius: 78px;
+      padding: 16px 40px;
+    }
+
+    &-feature {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      position: relative;
+
+      .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+        opacity: 0.8 !important;
+        background-color: white !important;
+      }
+
+      &-icon {
+        background: #ffffff;
+        border: 1px solid #8a8a8a;
+        border-radius: 78px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 14px;
+        cursor: pointer;
+
+        &-menu {
+          width: 2rem;
+        }
+
+        &-user {
+          width: 3rem;
+          background: #2522ca;
+          border-radius: 50%;
+          height: 3rem;
+          // object-fit: contain;
+        }
+      }
+    }
+
+    &-item {
+      text-transform: uppercase;
+      position: relative;
+      & a {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      &:hover {
+        & a {
+          opacity: 0.8;
+        }
+      }
+
+      &:first-child::after,
+      &:nth-child(2)::after {
+        content: "";
+        width: 1px;
+        height: 30px;
+        position: absolute;
+        top: -4px;
+        right: -18px;
+        background-color: white;
+      }
+    }
+  }
+
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-half1 {
+      padding-left: 23px;
+      padding-top: 6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      &-title {
+        color: white;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 120%;
+      }
+
+      &-desc {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 170%;
+        color: white;
+      }
+
+      &-buttons {
+        display: flex;
+        gap: 2rem;
+
+        & button {
+          padding: 15px 90px;
+          border-radius: 80px;
+          color: white;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        &-register {
+          background: #2522ca;
+          border: none;
+        }
+
+        &-login {
+          background: transparent;
+          border: 1px solid #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.header__menu {
+  .css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
+    top: 80px !important;
+    right: 35px;
+  }
+
+  a {
+    color: #000;
+  }
+}

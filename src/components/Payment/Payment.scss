@@ -1,0 +1,94 @@
+.payment__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 5rem 0 5rem 0;
+  .payment__wrapper {
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2rem 3rem;
+
+    .payment__title {
+      padding: 2rem 0;
+      border-bottom: gray 1px solid;
+    }
+
+    .payment__content {
+      padding-top: 2rem;
+      .payment__productInfo {
+        background: #f5f5f5;
+        border: 1px solid rgba(51, 51, 51, 0.4);
+        border-radius: 6px;
+        padding: 1rem 25em 1rem 2rem;
+        margin: 2rem 0;
+        .payment__productInfo-wrapper {
+          display: flex;
+          .payment__productInfo-label {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+          }
+          .payment__productInfo-value {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .payment__contactInfo {
+        background: #f5f5f5;
+        border: 1px solid rgba(51, 51, 51, 0.4);
+        border-radius: 6px;
+        padding: 1rem 25em 1rem 2rem;
+        margin: 2rem 0;
+
+        .payment__contactInfo-wrapper {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+          .payment__contactInfo-label {
+            margin-bottom: 1rem;
+          }
+
+          .payment__contactInfo-input {
+            margin-left: 1rem;
+            border-radius: 5px;
+            border: 1px solid #cdcdcd;
+            padding: 0.5rem 1rem;
+            font-size: 14px;
+          }
+
+          .payment__contactInfo-input:hover {
+            border: 1px solid black;
+          }
+
+          .payment__contactInfo-input:focus-visible {
+            outline: none;
+            border: 2px solid #1976d2;
+          }
+        }
+      }
+    }
+
+    .payment__noticed {
+      margin: 2rem 0;
+      background-color: #fcf3de;
+      padding: 2rem;
+    }
+
+    .payment__button {
+      margin-left: 40%;
+      border: none;
+      background-color: #2522ca;
+      font-size: 18px;
+      padding: 2rem 4rem;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

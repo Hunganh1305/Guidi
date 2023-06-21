@@ -1,0 +1,118 @@
+.footer__container {
+  background-color: #2522ca;
+  padding: 2rem 1.25rem 1.5rem;
+  padding-right: 3rem;
+  color: white;
+
+  .footer__upper {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    border-bottom: 1px #d9d9d9 solid;
+
+    &-help {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+
+      &-logo {
+        width: 180px;
+        height: 41px;
+        object-fit: contain;
+      }
+
+      &-text {
+        padding-left: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 21px;
+      }
+
+      &-inputbutton {
+        padding-left: 2rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        & input {
+          background: rgba(255, 255, 255, 0.15);
+          border-radius: 78px;
+          border: none;
+          height: 35px;
+          padding: 10px;
+          width: 280px;
+          color: white;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        & button {
+          padding: 5px 25px;
+          width: max-content;
+          height: 35px;
+          background: #ffffff;
+          border-radius: 78px;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 21px;
+          color: #2522ca;
+          position: absolute;
+          border: none;
+          right: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      justify-content: center;
+
+      &-title {
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 24px;
+      }
+
+      &-link {
+        font-weight: 300;
+        opacity: 0.8;
+        color: white;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .footer__lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-left: 2rem;
+
+    &-copyright {
+      font-size: 12px;
+    }
+
+    &-socials {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      & img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}

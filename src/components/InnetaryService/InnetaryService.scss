@@ -1,0 +1,45 @@
+// @import "rsuite/dist/rsuite.css";
+
+.date-time-picker {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-component {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  &-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+    width: 180px !important;
+  }
+
+  .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+    font-size: 1.5rem !important;
+  }
+
+  .css-i4bv87-MuiSvgIcon-root {
+    width: 2em;
+    height: 2em;
+  }
+}

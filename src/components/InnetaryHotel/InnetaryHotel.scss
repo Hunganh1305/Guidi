@@ -1,0 +1,16 @@
+.innetary__inputcontrol {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  width: fit-content;
+
+  .travelplanner__container-form-inputcontrol-text {
+    width: fit-content;
+  }
+
+  .date {
+    left: 0;
+    width: fit-content !important;
+  }
+}
