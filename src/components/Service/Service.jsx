@@ -23,6 +23,7 @@ const Service = ({
   planId,
   planInfo,
   setPlanInfo,
+  setOpenBudgetModal,
   setLoading,
 }) => {
   const dispatch = useDispatch();
@@ -38,7 +39,11 @@ const Service = ({
     setOpenWarningSnackbar({ ...openWarningSnackbar, open: false });
   };
 
-  const handleClickAdd = (serviceId) => {
+  const handleClickAdd = (serviceId,price) => {
+    if (price > planInfo.budget - planInfo.price) {
+      setOpenBudgetModal(true);
+      return;
+    }
     const data = {
       itineraryId: planId,
       serviceId: serviceId,
@@ -123,7 +128,7 @@ const Service = ({
             </div>
             <div className="service__detail-button">
               <button
-                onClick={() => handleClickAdd(item.id)}
+                onClick={() => handleClickAdd(item.id,item.price)}
                 className="service__add-button"
               >
                 Thêm

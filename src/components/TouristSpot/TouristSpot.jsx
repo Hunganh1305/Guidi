@@ -25,6 +25,7 @@ const TouristSpot = ({
   planId,
   planInfo,
   setPlanInfo,
+  setOpenBudgetModal,
   setLoading,
 }) => {
   const dispatch = useDispatch();
@@ -41,7 +42,11 @@ const TouristSpot = ({
     setOpenWarningSnackbar({ ...openWarningSnackbar, open: false });
   };
 
-  const handleClickAdd = (spotId) => {
+  const handleClickAdd = (spotId, price) => {
+    if (price > planInfo.budget - planInfo.price) {
+      setOpenBudgetModal(true);
+      return;
+    }
     const data = {
       itineraryId: planId,
       spotId: spotId,
@@ -140,7 +145,7 @@ const TouristSpot = ({
             </div>
             <div className="tourist__detail-button">
               <button
-                onClick={() => handleClickAdd(item.id)}
+                onClick={() => handleClickAdd(item.id,item.price)}
                 className="tourist__add-button"
               >
                 Thêm

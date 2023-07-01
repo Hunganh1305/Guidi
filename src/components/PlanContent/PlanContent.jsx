@@ -501,6 +501,7 @@ const PlanContent = () => {
           {type === "tourist" ? (
             <TouristSpot
               setLoading={setLoading}
+              setOpenBudgetModal={setOpenBudgetModal}
               planId={id}
               planInfo={planInfo}
               setPlanInfo={setPlanInfo}
@@ -514,6 +515,7 @@ const PlanContent = () => {
           {type === "service" ? (
             <Service
               setLoading={setLoading}
+              setOpenBudgetModal={setOpenBudgetModal}
               planId={id}
               planInfo={planInfo}
               setPlanInfo={setPlanInfo}
