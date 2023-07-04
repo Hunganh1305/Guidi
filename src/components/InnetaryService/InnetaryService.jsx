@@ -95,6 +95,23 @@ const InnetaryService = ({
       return;
     }
 
+    if(dayjs(planInfo.startDate).$d > date){
+      setOpenErrorSnackbar({
+        ...openSnackbar,
+        open: true,
+        error: "Ngày bạn chọn không thể sớm hơn ngày bắt đầu của lịch trình",
+      });
+      return;
+    }
+
+    if(dayjs(planInfo.endDate).$d < date){
+      setOpenErrorSnackbar({
+        ...openSnackbar,
+        open: true,
+        error: "Ngày bạn chọn không thể trễ hơn ngày kết thúc của lịch trình",
+      });
+      return;
+    }
     setLoading(true);
 
     const DateTimeFormated = {

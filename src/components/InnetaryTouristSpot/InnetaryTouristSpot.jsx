@@ -97,6 +97,23 @@ const InnetaryTouristSpot = ({
       return;
     }
 
+    if(dayjs(planInfo.startDate).$d > date){
+      setOpenErrorSnackbar({
+        ...openSnackbar,
+        open: true,
+        error: "Ngày bạn chọn không thể sớm hơn ngày bắt đầu của lịch trình",
+      });
+      return;
+    }
+
+    if(dayjs(planInfo.endDate).$d < date){
+      setOpenErrorSnackbar({
+        ...openSnackbar,
+        open: true,
+        error: "Ngày bạn chọn không thể trễ hơn ngày kết thúc của lịch trình",
+      });
+      return;
+    }
     const data = {
       itineraryId: planInfo.id,
       spotId: item.id,

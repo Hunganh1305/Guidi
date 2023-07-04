@@ -18,7 +18,6 @@ const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 const InnetaryHotel = ({ item, planInfo, setPlanInfo, setLoading }) => {
-  console.log(planInfo);
   const [dates, setDates] = useState([
     {
       startDate: new Date(item.checkInDate),
