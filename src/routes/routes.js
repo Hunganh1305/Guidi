@@ -1,4 +1,3 @@
-import Blog from "../components/Blog/Blog";
 import TourGuide from "../components/TourGuide/TourGuide";
 import TravelPlanner from "../components/TravelPlanner/TravelPlanner";
 import DefaultLayout from "../layouts/DefaultLayout/DefaultLayout";
@@ -9,6 +8,8 @@ import Payment from "../components/Payment/Payment";
 import Profile from "../components/Profile/Profile";
 import PlanList from "../components/ListPlan/PlanList";
 import Qrpayment from "../components/QrPayment/Qrpayment";
+import BlogDetail from "../components/Blog/BlogDetail";
+import Blog from "../components/Blog/Blog";
 
 const publicRoutes = [
   {
@@ -24,6 +25,7 @@ const publicRoutes = [
     private: true,
   },
   { path: "/blog", component: Blog, layout: DefaultLayout },
+  { path: "/blog/:id", component: BlogDetail, layout: DefaultLayout },
   { path: "/tourguide", component: TourGuide, layout: DefaultLayout },
   { path: "/login", component: Login, layout: null },
   { path: "/register", component: Register, layout: null },

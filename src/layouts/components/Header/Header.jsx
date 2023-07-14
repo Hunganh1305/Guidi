@@ -12,9 +12,8 @@ import { logout } from "../../../feature/userSlice";
 const Header = () => {
   const user = useSelector((state) => state.user.user);
   const headerNav = [
-    { name: "Home", to: "/" },
-    { name: "Tour Guide", to: "/tourguide" },
-    { name: "Travel", to: "/planner" },
+    { name: "Travel", to: "/" },
+    { name: "Blog", to: "/blog" },
   ];
 
   const headerMenu = [
@@ -60,7 +59,7 @@ const Header = () => {
         <Link to="/">
           <img className="header__nav-logo" src={Logo} alt="Logo" />
         </Link>
-        {/* <nav className="header__nav-tab">
+        <nav className="header__nav-tab">
           <ul className="header__nav-list">
             {headerNav.map((item, i) => (
               <li
@@ -71,7 +70,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
-        </nav> */}
+        </nav>
         <div className="header__nav-feature">
           <Button
             className="header__nav-feature-icon"

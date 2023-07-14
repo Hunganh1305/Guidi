@@ -539,6 +539,7 @@ const PlanContent = () => {
           setPlanInfo={setPlanInfo}
           planInfo={planInfo}
           handleClose={handleCloseModal}
+          setOpenBudgetModal={setOpenBudgetModal}
         />
       </Modal>
 

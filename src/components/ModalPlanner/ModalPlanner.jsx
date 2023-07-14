@@ -8,7 +8,12 @@ import InnetaryService from "../InnetaryService/InnetaryService";
 import InnetaryTouristSpot from "../InnetaryTouristSpot/InnetaryTouristSpot";
 import LoadingScreen from "../LoadingScreen/LoadingScreen";
 
-const ModalPlanner = ({ handleClose, planInfo, setPlanInfo }) => {
+const ModalPlanner = ({
+  handleClose,
+  planInfo,
+  setPlanInfo,
+  setOpenBudgetModal,
+}) => {
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
@@ -31,17 +36,24 @@ const ModalPlanner = ({ handleClose, planInfo, setPlanInfo }) => {
       )}
 
       <h3 className="innetary__title">Khách sạn</h3>
-      {!planInfo.hotel ? (
+      {!planInfo.hotelBookings.length === 0 ? (
         <div className="search-empty">
           <img src={Empty} alt="" />
         </div>
       ) : (
-        <InnetaryHotel
-          setLoading={setLoading}
-          setPlanInfo={setPlanInfo}
-          planInfo={planInfo}
-          item={planInfo.hotel}
-        />
+        planInfo.hotelBookings.map((item) => (
+          <InnetaryHotel
+            setLoading={setLoading}
+            setPlanInfo={setPlanInfo}
+            planInfo={planInfo}
+            item={item.room.hotel}
+            room={item.room}
+            checkInDate={item.checkInDate}
+            checkOutDate={item.checkOutDate}
+            totalPrice={item.totalPrice}
+            setOpenBudgetModal={setOpenBudgetModal}
+          />
+        ))
       )}
 
       <h3 className="innetary__title">Dịch vụ</h3>

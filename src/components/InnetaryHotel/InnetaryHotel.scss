@@ -14,3 +14,16 @@
     width: fit-content !important;
   }
 }
+
+.innetary__hotel-container {
+  .hotel__item-content-info-bottom {
+    align-items: flex-start;
+
+    &-room {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem !important;
+    }
+  }
+}

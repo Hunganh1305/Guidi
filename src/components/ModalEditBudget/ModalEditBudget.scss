@@ -10,88 +10,94 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
 
-  .budget__edit-header {
-    height: 10%;
-    padding: 10px 10px;
+.budget__edit-header {
+  height: 10%;
+  padding: 10px 10px;
+  background-color: #2522ca;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.budget__edit-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  background-color: white;
+  padding: 0 2rem 2rem;
+
+  .budget__edit-button {
     background-color: #2522ca;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border: none;
     color: white;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  .budget__edit-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 2rem;
-    background-color: white;
-    padding: 0 2rem 2rem;
-
-    .budget__edit-button {
-      background-color: #2522ca;
-      border: none;
-      color: white;
-      font-size: 16px;
-      padding: 1rem 2rem;
-      border-radius: 5px;
-      text-transform: uppercase;
-      font-weight: 550;
-      cursor: pointer;
-      &:hover {
-        opacity: 0.8;
-      }
+    font-size: 16px;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 550;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
     }
   }
+}
 
-  .budget__edit-error {
-    text-align: center;
-    font-size: 18px;
-    color: red;
-    font-weight: 600;
+.budget__edit-error {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  font-weight: 600;
+}
+
+.budget__edit-inputcontrol {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+
+  &-icon {
+    font-size: 20px;
   }
 
-  .budget__edit-inputcontrol {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    justify-content: center;
+  .MuiAutocomplete-input {
+    font-size: 16px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
 
-    &-icon {
-      font-size: 20px;
+  &-input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 1.25rem;
+
+    &::placeholder {
+      color: #aeaeae;
+      font-weight: 100;
     }
 
-    &-input {
-      width: 70%;
-      padding: 10px;
-      border-radius: 10px;
-      height: 50px;
-      font-size: 1.25rem;
+    border: 1px solid #cdcdcd;
 
-      &::placeholder {
-        color: #aeaeae;
-        font-weight: 100;
-      }
+    &:hover {
+      border: 1px solid black;
+    }
 
-      border: 1px solid #cdcdcd;
-
-      &:hover {
-        border: 1px solid black;
-      }
-
-      &:focus-visible {
-        outline: none;
-        border: 2px solid #1976d2;
-      }
+    &:focus-visible {
+      outline: none;
+      border: 2px solid #1976d2;
     }
   }
 }

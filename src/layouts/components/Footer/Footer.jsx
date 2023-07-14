@@ -12,18 +12,10 @@ const Footer = () => {
       contact: [
         {
           display: "Về chúng tôi",
-          to: "/",
+          to: "https://www.booking.com/content/about.en-gb.html?aid=356980&label=gog235jc-1DCBQoggJCBWFib3V0SDNYA2j0AYgBAZgBCbgBF8gBDNgBA-gBAYgCAagCA7gCgd-6pQbAAgHSAiRhYjE3MDBmMS1hMzJlLTQ5MzEtYmVlYi1mYjFjY2UwZmE1ZjbYAgTgAgE&sid=63462e60db7c68a4ce038a8dae91dfc5&keep_landing=1&",
         },
         {
           display: "Guidi Blog",
-          to: "/",
-        },
-        {
-          display: "Cơ hội nghề nghiệp",
-          to: "/",
-        },
-        {
-          display: "Phiếu quà tặng Guidi",
           to: "/",
         },
       ],
@@ -33,15 +25,11 @@ const Footer = () => {
       contact: [
         {
           display: "Đăng ký nhà cung cấp",
-          to: "/",
+          to: "/https://partnerships.booking.com/",
         },
         {
           display: "Đối tác đăng kí",
-          to: "/",
-        },
-        {
-          display: "Chương trình cho đại lí",
-          to: "/",
+          to: "/https://partnerships.booking.com/",
         },
       ],
     },
@@ -50,19 +38,15 @@ const Footer = () => {
       contact: [
         {
           display: "Chính sách bảo mật",
-          to: "/",
+          to: "https://www.booking.com/content/privacy.en-gb.html?aid=356980&label=gog235jc-1FCBQoggJCBWFib3V0SDNYA2j0AYgBAZgBCbgBF8gBDNgBAegBAfgBDYgCAagCA7gCgd-6pQbAAgHSAiRhYjE3MDBmMS1hMzJlLTQ5MzEtYmVlYi1mYjFjY2UwZmE1ZjbYAgbgAgE&sid=63462e60db7c68a4ce038a8dae91dfc5",
         },
         {
           display: "Chính sách cookie",
-          to: "/",
+          to: "https://www.booking.com/content/privacy.en-gb.html?aid=356980&label=gog235jc-1FCBQoggJCBWFib3V0SDNYA2j0AYgBAZgBCbgBF8gBDNgBAegBAfgBDYgCAagCA7gCgd-6pQbAAgHSAiRhYjE3MDBmMS1hMzJlLTQ5MzEtYmVlYi1mYjFjY2UwZmE1ZjbYAgbgAgE&sid=63462e60db7c68a4ce038a8dae91dfc5",
         },
         {
           display: "Chính sách và qui định",
-          to: "/",
-        },
-        {
-          display: "Chính sách thưởng lỗi phần mềm",
-          to: "/",
+          to: "https://www.booking.com/content/privacy.en-gb.html?aid=356980&label=gog235jc-1FCBQoggJCBWFib3V0SDNYA2j0AYgBAZgBCbgBF8gBDNgBAegBAfgBDYgCAagCA7gCgd-6pQbAAgHSAiRhYjE3MDBmMS1hMzJlLTQ5MzEtYmVlYi1mYjFjY2UwZmE1ZjbYAgbgAgE&sid=63462e60db7c68a4ce038a8dae91dfc5",
         },
       ],
     },

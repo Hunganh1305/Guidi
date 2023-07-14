@@ -17,11 +17,21 @@ import { Snackbar } from "@mui/material";
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
-const InnetaryHotel = ({ item, planInfo, setPlanInfo, setLoading }) => {
+const InnetaryHotel = ({
+  item,
+  planInfo,
+  setPlanInfo,
+  setLoading,
+  room,
+  checkInDate,
+  checkOutDate,
+  totalPrice,
+  setOpenBudgetModal,
+}) => {
   const [dates, setDates] = useState([
     {
-      startDate: new Date(item.checkInDate),
-      endDate: new Date(item.checkOutDate),
+      startDate: new Date(checkInDate),
+      endDate: new Date(checkOutDate),
       key: "selection",
     },
   ]);
@@ -45,9 +55,9 @@ const InnetaryHotel = ({ item, planInfo, setPlanInfo, setLoading }) => {
   const handleDelete = () => {
     setLoading(true);
     fetch(
-      `https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}/Hotel`,
+      `https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}/Hotel/${room.id}`,
       {
-        method: "PUT",
+        method: "DELETE",
         headers: {
           "Content-Type": "application/json",
         },
@@ -101,11 +111,65 @@ const InnetaryHotel = ({ item, planInfo, setPlanInfo, setLoading }) => {
           )}`}</div>
         )}
 
-        {/* {openDate && (
+        {openDate && (
           <DateRange
             editableDateInputs={true}
             onChange={(item) => {
-              setDates([item.selection]);
+              setLoading(true);
+              const oneDay = 24 * 60 * 60 * 1000;
+              const dateRange = [item.selection][0];
+              const diffDays = Math.round(
+                Math.abs((dateRange.endDate - dateRange.startDate) / oneDay)
+              );
+              if (room.price * diffDays > planInfo.budget - planInfo.price) {
+                setOpenBudgetModal(true);
+                setLoading(false);
+                return;
+              }
+              const data = {
+                itineraryId: planInfo.id,
+                roomId: room.id,
+                checkInDate: format(
+                  [item.selection][0].startDate,
+                  "yyyy-MM-dd"
+                ),
+                checkOutDate: format([item.selection][0].endDate, "yyyy-MM-dd"),
+              };
+
+              fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/Hotel`, {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+              })
+                .then((res) => res.json())
+                .then((respond) => {
+                  console.log(respond);
+                  fetch(
+                    `https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}`
+                  )
+                    .then((res) => res.json())
+                    .then((response) => {
+                      // console.log(response);
+                      setPlanInfo(response.result);
+                      let itenary = JSON.parse(localStorage.getItem("itenary"));
+                      itenary = { ...itenary, price: response.result.price };
+                      localStorage.setItem("itenary", JSON.stringify(itenary));
+                      const action = updateInnetary();
+                      dispatch(action);
+                      setDates([item.selection]);
+                      setLoading(false);
+                      setOpenSnackbar({
+                        ...openSnackbar,
+                        open: true,
+                        feature: "sửa lịch trình",
+                      });
+                    })
+                    .catch((err) => console.log(err));
+                })
+                .catch((err) => console.log(err));
+
               setOpenDate(!openDate);
             }}
             moveRangeOnFirstSelection={false}
@@ -113,7 +177,7 @@ const InnetaryHotel = ({ item, planInfo, setPlanInfo, setLoading }) => {
             className="date"
             minDate={new Date()}
           />
-        )} */}
+        )}
       </div>
       <div key={item.id} className="hotel__item">
         <div className="hotel__item-header">
@@ -186,16 +250,15 @@ const InnetaryHotel = ({ item, planInfo, setPlanInfo, setLoading }) => {
             <div className="hotel__item-content-info-bottom">
               <div className="hotel__item-content-info-bottom-room">
                 <h3 className="hotel__item-content-info-bottom-room-name">
-                  {item.roomType === "Deluxe" && "Phòng hạng sang"}
-                  {item.roomType === "Standard" && "Phòng tiêu chuẩn"}
+                  {room.roomType}
                 </h3>
                 <h3 className="hotel__item-content-info-bottom-room-type">
-                  {item.roomName}
+                  {room.roomName}
                 </h3>
               </div>
               <div className="hotel__item-content-info-bottom-feature">
                 <h3 className="hotel__item-content-info-bottom-feature-price">
-                  {item.price.toLocaleString("vi-VN", {
+                  {totalPrice.toLocaleString("vi-VN", {
                     style: "currency",
                     currency: "VND",
                   })}

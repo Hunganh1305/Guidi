@@ -104,6 +104,7 @@ const TravelPlanner = () => {
       })
         .then((res) => res.json())
         .then((response) => {
+          console.log(response);
           const itenary = {
             budget: values.budget,
             destinationId: response.result.destinationId,
@@ -131,6 +132,7 @@ const TravelPlanner = () => {
     fetch("https://guidiapi.azurewebsites.net/api/Location")
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         setLocation(data.result);
         setLoading(false);
       })
