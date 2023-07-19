@@ -1,6 +1,6 @@
 import React from "react";
 import "./Qrpayment.scss";
-import Qrcode from "../../assets/qrcode.png";
+import Qrcode from "../../assets/QRCodeMOMO.png";
 import Logo from "../../assets/logo.png";
 
 const Qrpayment = () => {

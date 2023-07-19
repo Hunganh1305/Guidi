@@ -16,7 +16,7 @@ const Footer = () => {
         },
         {
           display: "Guidi Blog",
-          to: "/",
+          to: "/blog",
         },
       ],
     },
@@ -25,11 +25,11 @@ const Footer = () => {
       contact: [
         {
           display: "Đăng ký nhà cung cấp",
-          to: "/https://partnerships.booking.com/",
+          to: "https://partnerships.booking.com/",
         },
         {
           display: "Đối tác đăng kí",
-          to: "/https://partnerships.booking.com/",
+          to: "https://partnerships.booking.com/",
         },
       ],
     },
@@ -68,7 +68,11 @@ const Footer = () => {
           <div className="footer__upper-contact">
             <h2 className="footer__upper-contact-title">{item.title}</h2>
             {item.contact.map((item2, i) => (
-              <a href={item2.to} className="footer__upper-contact-link">
+              <a
+                href={item2.to}
+                className="footer__upper-contact-link"
+                target="_blank"
+              >
                 {item2.display}
               </a>
             ))}

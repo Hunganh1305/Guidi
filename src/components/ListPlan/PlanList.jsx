@@ -71,6 +71,7 @@ const PlanList = () => {
           )}
         </div>
       )}
+      {loading && <LoadingScreen />}
     </>
   );
 };
