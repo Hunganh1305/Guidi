@@ -53,7 +53,7 @@ const Flight = ({
     }
     setLoading(true);
     fetch(
-      `https://guidiapi.azurewebsites.net/api/Itinerary/${planId}/Flight/${flightId}`,
+      `https://guidi.azurewebsites.net/api/Itinerary/${planId}/Flight/${flightId}`,
       {
         method: "PUT",
         headers: {
@@ -63,7 +63,7 @@ const Flight = ({
     )
       .then((res) => res.json())
       .then((response) => {
-        fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
+        fetch(`https://guidi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
           .then((res) => res.json())
           .then((response) => {
             setPlanInfo(response.result);

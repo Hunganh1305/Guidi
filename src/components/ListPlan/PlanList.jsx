@@ -19,7 +19,7 @@ const PlanList = () => {
       if (userInfo) {
         setLoading(true);
         fetch(
-          `https://guidiapi.azurewebsites.net/api/Itinerary/User/${userInfo.id}`
+          `https://guidi.azurewebsites.net/api/Itinerary/User/${userInfo.id}`
         )
           .then((res) => res.json())
           .then((response) => {

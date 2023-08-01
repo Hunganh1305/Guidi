@@ -38,7 +38,7 @@ const Login = () => {
         } = data;
         setLoading(true);
         fetch(
-          `https://guidiapi.azurewebsites.net/api/User/LoginByThirdParty?email=${providerData[0].email}`,
+          `https://guidi.azurewebsites.net/api/User/LoginByThirdParty?email=${providerData[0].email}`,
           {
             method: "POST",
             headers: {
@@ -79,7 +79,7 @@ const Login = () => {
     setLoading(true);
 
     fetch(
-      `https://guidiapi.azurewebsites.net/api/User/Login?email=${email}&password=${password}`,
+      `https://guidi.azurewebsites.net/api/User/Login?email=${email}&password=${password}`,
       {
         method: "POST",
         headers: {

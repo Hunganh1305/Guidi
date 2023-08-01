@@ -80,13 +80,13 @@ const Profile = () => {
     validationSchema: SignupSchema,
     onSubmit: (values) => {
       setLoading(true);
-      fetch(`https://guidiapi.azurewebsites.net/api/User/${userInfo.id}`)
+      fetch(`https://guidi.azurewebsites.net/api/User/${userInfo.id}`)
         .then((res) => res.json())
         .then((response) => {
           const data = { ...values, password: response.result.password };
 
           fetch(
-            `https://guidiapi.azurewebsites.net/api/User/Update/${userInfo.id}`,
+            `https://guidi.azurewebsites.net/api/User/Update/${userInfo.id}`,
             {
               method: "PUT",
               headers: {

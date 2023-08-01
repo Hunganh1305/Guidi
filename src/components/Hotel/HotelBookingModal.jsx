@@ -44,7 +44,7 @@ const HotelBookingModal = ({
       checkOutDate: format(dates[0].endDate, "yyyy-MM-dd"),
     };
 
-    fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/Hotel`, {
+    fetch(`https://guidi.azurewebsites.net/api/Itinerary/Hotel`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const HotelBookingModal = ({
     })
       .then((res) => res.json())
       .then((response) => {
-        fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
+        fetch(`https://guidi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
           .then((res) => res.json())
           .then((response) => {
             setPlanInfo(response.result);

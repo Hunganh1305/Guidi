@@ -7,7 +7,7 @@ const SearchTourist = ({ formik, location, setLoading }) => {
   useEffect(() => {
     const fetchPreferencesList = () => {
       setLoading(true);
-      fetch(`https://guidiapi.azurewebsites.net/api/Preference`)
+      fetch(`https://guidi.azurewebsites.net/api/Preference`)
         .then((res) => res.json())
         .then((response) => {
           setPreferences([...response.result]);

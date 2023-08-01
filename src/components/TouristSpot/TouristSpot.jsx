@@ -54,7 +54,7 @@ const TouristSpot = ({
 
     setLoading(true);
 
-    fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/TouristSpot`, {
+    fetch(`https://guidi.azurewebsites.net/api/Itinerary/TouristSpot`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ const TouristSpot = ({
           setLoading(false);
           return;
         }
-        fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
+        fetch(`https://guidi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
           .then((res) => res.json())
           .then((response) => {
             setPlanInfo(response.result);
@@ -145,7 +145,7 @@ const TouristSpot = ({
             </div>
             <div className="tourist__detail-button">
               <button
-                onClick={() => handleClickAdd(item.id,item.price)}
+                onClick={() => handleClickAdd(item.id, item.price)}
                 className="tourist__add-button"
               >
                 Thêm

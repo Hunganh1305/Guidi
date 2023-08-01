@@ -55,7 +55,7 @@ const InnetaryHotel = ({
   const handleDelete = () => {
     setLoading(true);
     fetch(
-      `https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}/Hotel/${room.id}`,
+      `https://guidi.azurewebsites.net/api/Itinerary/${planInfo.id}/Hotel/${room.id}`,
       {
         method: "DELETE",
         headers: {
@@ -65,7 +65,7 @@ const InnetaryHotel = ({
     )
       .then((res) => res.json())
       .then((response) => {
-        fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
+        fetch(`https://guidi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
           .then((res) => res.json())
           .then((response) => {
             console.log(response);
@@ -136,7 +136,7 @@ const InnetaryHotel = ({
                 checkOutDate: format([item.selection][0].endDate, "yyyy-MM-dd"),
               };
 
-              fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/Hotel`, {
+              fetch(`https://guidi.azurewebsites.net/api/Itinerary/Hotel`, {
                 method: "PUT",
                 headers: {
                   "Content-Type": "application/json",
@@ -147,7 +147,7 @@ const InnetaryHotel = ({
                 .then((respond) => {
                   console.log(respond);
                   fetch(
-                    `https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}`
+                    `https://guidi.azurewebsites.net/api/Itinerary/${planInfo.id}`
                   )
                     .then((res) => res.json())
                     .then((response) => {

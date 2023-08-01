@@ -7,7 +7,7 @@ const SearchFlight = ({ loading, formik, location, setLoading }) => {
   useEffect(() => {
     const fetchFlightBrand = () => {
       setLoading(true);
-      fetch(`https://guidiapi.azurewebsites.net/api/Flight/BrandName`)
+      fetch(`https://guidi.azurewebsites.net/api/Flight/BrandName`)
         .then((res) => res.json())
         .then((response) => {
           setBrands([...response.result, "Tất cả"]);

@@ -103,7 +103,7 @@ const PlanContent = () => {
 
   useEffect(() => {
     const fetchItenaryInfo = () => {
-      fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/${id}`)
+      fetch(`https://guidi.azurewebsites.net/api/Itinerary/${id}`)
         .then((res) => res.json())
         .then((response) => {
           setPlanInfo(response.result);
@@ -111,7 +111,7 @@ const PlanContent = () => {
         .catch((err) => console.log(err));
     };
     const fetchLocations = () => {
-      fetch(`https://guidiapi.azurewebsites.net/api/Location`)
+      fetch(`https://guidi.azurewebsites.net/api/Location`)
         .then((res) => res.json())
         .then((response) => {
           setLocation(response.result);
@@ -135,7 +135,7 @@ const PlanContent = () => {
     onSubmit: (values) => {
       setLoading(true);
       fetch(
-        `https://guidiapi.azurewebsites.net/api/Flight?destinationtoid=${
+        `https://guidi.azurewebsites.net/api/Flight?destinationtoid=${
           values.location.id
         }${
           values.locationFrom.name === "Tất cả"
@@ -172,7 +172,7 @@ const PlanContent = () => {
     onSubmit: (values) => {
       setLoading(true);
       fetch(
-        `https://guidiapi.azurewebsites.net/api/Hotel?locationid=${values.location.id}&rating=${values.rating.value}&roomType=${values.roomType.value}&minPrice=${values.minPrice}&maxPrice=${values.maxPrice}`
+        `https://guidi.azurewebsites.net/api/Hotel?locationid=${values.location.id}&rating=${values.rating.value}&roomType=${values.roomType.value}&minPrice=${values.minPrice}&maxPrice=${values.maxPrice}`
       )
         .then((res) => res.json())
         .then((response) => {
@@ -197,7 +197,7 @@ const PlanContent = () => {
     onSubmit: (values) => {
       setLoading(true);
       fetch(
-        `https://guidiapi.azurewebsites.net/api/Service?locationId=${
+        `https://guidi.azurewebsites.net/api/Service?locationId=${
           values.location.id
         }${values.minPrice === "" ? "" : "&minPrice=" + values.minPrice}${
           values.maxPrice === "" ? "" : "&maxPrice=" + values.maxPrice
@@ -227,7 +227,7 @@ const PlanContent = () => {
     onSubmit: (values) => {
       setLoading(true);
       fetch(
-        `https://guidiapi.azurewebsites.net/api/TouristSpot?locationId=${
+        `https://guidi.azurewebsites.net/api/TouristSpot?locationId=${
           values.location.id
         }${
           values.preference.name === "Tất cả"
@@ -259,7 +259,7 @@ const PlanContent = () => {
           const fetchFlights = () => {
             setLoading(true);
             fetch(
-              `https://guidiapi.azurewebsites.net/api/Flight?destinationtoid=${
+              `https://guidi.azurewebsites.net/api/Flight?destinationtoid=${
                 flightFormik.values.location.id
               }${
                 flightFormik.values.locationFrom.name === "Tất cả"
@@ -301,10 +301,11 @@ const PlanContent = () => {
           const fetchHotels = () => {
             setLoading(true);
             fetch(
-              `https://guidiapi.azurewebsites.net/api/Hotel?locationid=${hotelFormik.values.location.id}&rating=${hotelFormik.values.rating.value}&roomType=${hotelFormik.values.roomType.value}&minPrice=${hotelFormik.values.minPrice}&maxPrice=${hotelFormik.values.maxPrice}`
+              `https://guidi.azurewebsites.net/api/Hotel?locationid=${hotelFormik.values.location.id}&rating=${hotelFormik.values.rating.value}&roomType=${hotelFormik.values.roomType.value}&minPrice=${hotelFormik.values.minPrice}&maxPrice=${hotelFormik.values.maxPrice}`
             )
               .then((res) => res.json())
               .then((response) => {
+                console.log(response);
                 if (response.errorMessage) {
                   setHotelResult([]);
                   setLoading(false);
@@ -321,7 +322,7 @@ const PlanContent = () => {
           const fetchServices = () => {
             setLoading(true);
             fetch(
-              `https://guidiapi.azurewebsites.net/api/Service?locationId=${
+              `https://guidi.azurewebsites.net/api/Service?locationId=${
                 serviceFormik.values.location.id
               }${
                 serviceFormik.values.minPrice === ""
@@ -351,7 +352,7 @@ const PlanContent = () => {
           const fetchTouristSpot = () => {
             setLoading(true);
             fetch(
-              `https://guidiapi.azurewebsites.net/api/TouristSpot?locationId=${
+              `https://guidi.azurewebsites.net/api/TouristSpot?locationId=${
                 touristFormik.values.location.id
               }${
                 touristFormik.values.preference.name === "Tất cả"

@@ -2,7 +2,7 @@ export const blogs = [
   {
     id: 1,
     avatar:
-      "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/272518333_1367231600393571_7192144079917571921_n.jpg?stp=dst-jpg_s851x315&_nc_cat=106&cb=99be929b-3346023f&ccb=1-7&_nc_sid=da31f3&_nc_ohc=qFLKapt_lgwAX8R4NIn&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfAgOU8WUFZpEMRGibl1lIcM4Xg_FDprL_u5iqSpbccRkA&oe=64B45527",
+      "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/272518333_1367231600393571_7192144079917571921_n.jpg?_nc_cat=106&cb=99be929b-3346023f&ccb=1-7&_nc_sid=174925&_nc_ohc=46T_NkU6l74AX_O-8Mg&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfDZpKlxI-LxxmdwlBDAp9VFytckFK2bRlMfMRBU0bOurA&oe=64CC1027",
     username: "Hà Anh Tú",
     Img1: "https://static.wixstatic.com/media/c747b2_4ecfbb6920ca473d9061a704bbf1660b~mv2.jpg/v1/fill/w_960,h_538,al_c,q_85,enc_auto/c747b2_4ecfbb6920ca473d9061a704bbf1660b~mv2.jpg",
     Title1: "Du lịch bụi - Kinh nghiệm cho người mới bắt đầu",
@@ -30,7 +30,7 @@ export const blogs = [
   {
     id: 2,
     avatar:
-      "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/272518333_1367231600393571_7192144079917571921_n.jpg?stp=dst-jpg_s851x315&_nc_cat=106&cb=99be929b-3346023f&ccb=1-7&_nc_sid=da31f3&_nc_ohc=qFLKapt_lgwAX8R4NIn&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfAgOU8WUFZpEMRGibl1lIcM4Xg_FDprL_u5iqSpbccRkA&oe=64B45527",
+      "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/272518333_1367231600393571_7192144079917571921_n.jpg?_nc_cat=106&cb=99be929b-3346023f&ccb=1-7&_nc_sid=174925&_nc_ohc=46T_NkU6l74AX_O-8Mg&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfDZpKlxI-LxxmdwlBDAp9VFytckFK2bRlMfMRBU0bOurA&oe=64CC1027",
     username: "Hà Anh Tú",
     Img1: "https://static.wixstatic.com/media/c747b2_5b4e0cee01fa4a0fae1a2a4a481576f8~mv2.jpg/v1/fill/w_1080,h_1080,al_c,q_85,enc_auto/c747b2_5b4e0cee01fa4a0fae1a2a4a481576f8~mv2.jpg",
     Title1: "Trải nghiệm du lịch bụi Ninh Bình cực HOT",
@@ -57,7 +57,7 @@ export const blogs = [
   {
     id: 3,
     avatar:
-      "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/272518333_1367231600393571_7192144079917571921_n.jpg?stp=dst-jpg_s851x315&_nc_cat=106&cb=99be929b-3346023f&ccb=1-7&_nc_sid=da31f3&_nc_ohc=qFLKapt_lgwAX8R4NIn&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfAgOU8WUFZpEMRGibl1lIcM4Xg_FDprL_u5iqSpbccRkA&oe=64B45527",
+      "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/272518333_1367231600393571_7192144079917571921_n.jpg?_nc_cat=106&cb=99be929b-3346023f&ccb=1-7&_nc_sid=174925&_nc_ohc=46T_NkU6l74AX_O-8Mg&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfDZpKlxI-LxxmdwlBDAp9VFytckFK2bRlMfMRBU0bOurA&oe=64CC1027",
     username: "Hà Anh Tú",
     Img1: "https://static.wixstatic.com/media/c747b2_f716ad72f5c14ad2a2f84ed6dadef5e6~mv2.jpg/v1/fill/w_808,h_535,al_c,lg_1,q_85,enc_auto/c747b2_f716ad72f5c14ad2a2f84ed6dadef5e6~mv2.jpg",
     Title1: "Giới trẻ thích mê những địa điểm check in khi du lịch bụi",
@@ -84,7 +84,7 @@ export const blogs = [
   {
     id: 4,
     avatar:
-      "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-1/273681927_1378581955896923_663240674343702612_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=7206a8&_nc_ohc=N86YcxEsSIAAX8jg4l0&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfBC7OxSPDpI-eMmGUfF-QabwPvK-NsXwLJtYowusEyhqQ&oe=64B2FC29",
+      "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-1/273681927_1378581955896923_663240674343702612_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=7206a8&_nc_ohc=oqJjzRcy1KQAX-P38CL&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfBuhzrQQ4N8CtnVJYlYFAMK0SbQDFMy1n7hV9Vy_qX7Lw&oe=64CCB169",
     username: "Phạm Nguyễn Hùng Anh",
     Img1: "https://static.wixstatic.com/media/c747b2_8ba2fc30fa8c4ca68643a16581155a5b~mv2.jpg/v1/fill/w_850,h_478,al_c,q_85,enc_auto/c747b2_8ba2fc30fa8c4ca68643a16581155a5b~mv2.jpg",
     Title1: "Trải nghiệm du lịch Singapore có một không hai",
@@ -116,7 +116,7 @@ export const blogs = [
   {
     id: 5,
     avatar:
-      "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-1/273681927_1378581955896923_663240674343702612_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=7206a8&_nc_ohc=N86YcxEsSIAAX8jg4l0&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfBC7OxSPDpI-eMmGUfF-QabwPvK-NsXwLJtYowusEyhqQ&oe=64B2FC29",
+      "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-1/273681927_1378581955896923_663240674343702612_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=7206a8&_nc_ohc=oqJjzRcy1KQAX-P38CL&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfBuhzrQQ4N8CtnVJYlYFAMK0SbQDFMy1n7hV9Vy_qX7Lw&oe=64CCB169",
     username: "Phạm Nguyễn Hùng Anh",
     Img1: "https://static.wixstatic.com/media/c747b2_b2f4b01aefbb4046ad894a74c76ff2a3~mv2.jpg/v1/fill/w_900,h_601,al_c,q_85,enc_auto/c747b2_b2f4b01aefbb4046ad894a74c76ff2a3~mv2.jpg",
     Title1: "Bật mí kinh nghiệm du lịch bụi Đà Lạt từ A đến Z",
@@ -144,7 +144,7 @@ export const blogs = [
   {
     id: 6,
     avatar:
-      "https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-1/273681927_1378581955896923_663240674343702612_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=7206a8&_nc_ohc=N86YcxEsSIAAX8jg4l0&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfBC7OxSPDpI-eMmGUfF-QabwPvK-NsXwLJtYowusEyhqQ&oe=64B2FC29",
+      "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-1/273681927_1378581955896923_663240674343702612_n.jpg?stp=dst-jpg_p320x320&_nc_cat=104&cb=99be929b-3346023f&ccb=1-7&_nc_sid=7206a8&_nc_ohc=oqJjzRcy1KQAX-P38CL&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfBuhzrQQ4N8CtnVJYlYFAMK0SbQDFMy1n7hV9Vy_qX7Lw&oe=64CCB169",
     username: "Phạm Nguyễn Hùng Anh",
     Img1: "https://static.wixstatic.com/media/c747b2_391f9e503e264d3d942dc34fc8a960f0~mv2.png/v1/fill/w_960,h_480,al_c,lg_1,q_90,enc_auto/c747b2_391f9e503e264d3d942dc34fc8a960f0~mv2.png",
     Title1: "Trải nghiệm đi du lịch một mình có gì thú vị?",

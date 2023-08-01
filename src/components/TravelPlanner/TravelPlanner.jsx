@@ -94,7 +94,7 @@ const TravelPlanner = () => {
       };
 
       setLoading(true);
-      fetch("https://guidiapi.azurewebsites.net/api/Itinerary", {
+      fetch("https://guidi.azurewebsites.net/api/Itinerary", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -129,7 +129,7 @@ const TravelPlanner = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://guidiapi.azurewebsites.net/api/Location")
+    fetch("https://guidi.azurewebsites.net/api/Location")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

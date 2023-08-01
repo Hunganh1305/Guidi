@@ -73,7 +73,7 @@ const Register = () => {
       setEmailExisted(false);
       console.log(values);
       setLoading(true);
-      fetch(`https://guidiapi.azurewebsites.net/api/User/Register`, {
+      fetch(`https://guidi.azurewebsites.net/api/User/Register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

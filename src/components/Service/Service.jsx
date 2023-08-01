@@ -39,7 +39,7 @@ const Service = ({
     setOpenWarningSnackbar({ ...openWarningSnackbar, open: false });
   };
 
-  const handleClickAdd = (serviceId,price) => {
+  const handleClickAdd = (serviceId, price) => {
     if (price > planInfo.budget - planInfo.price) {
       setOpenBudgetModal(true);
       return;
@@ -50,7 +50,7 @@ const Service = ({
     };
 
     setLoading(true);
-    fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/Service`, {
+    fetch(`https://guidi.azurewebsites.net/api/Itinerary/Service`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Service = ({
           setLoading(false);
           return;
         }
-        fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
+        fetch(`https://guidi.azurewebsites.net/api/Itinerary/${planInfo.id}`)
           .then((res) => res.json())
           .then((response) => {
             setPlanInfo(response.result);
@@ -128,7 +128,7 @@ const Service = ({
             </div>
             <div className="service__detail-button">
               <button
-                onClick={() => handleClickAdd(item.id,item.price)}
+                onClick={() => handleClickAdd(item.id, item.price)}
                 className="service__add-button"
               >
                 Thêm

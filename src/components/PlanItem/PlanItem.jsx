@@ -46,7 +46,7 @@ const PlanItem = ({ plan, setPlans, userId, setLoading }) => {
 
   const handleDelete = () => {
     setLoading(true);
-    fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/${plan.id}`, {
+    fetch(`https://guidi.azurewebsites.net/api/Itinerary/${plan.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const PlanItem = ({ plan, setPlans, userId, setLoading }) => {
     })
       .then((res) => res.json())
       .then((response) => {
-        fetch(`https://guidiapi.azurewebsites.net/api/Itinerary/User/${userId}`)
+        fetch(`https://guidi.azurewebsites.net/api/Itinerary/User/${userId}`)
           .then((res) => res.json())
           .then((response) => {
             console.log(response);
