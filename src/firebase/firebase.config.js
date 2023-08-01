@@ -8,7 +8,7 @@ import {
 
 const firebaseConfig = {
   apiKey: "AIzaSyA8qMQWnfuNSc7LYu0pvYkqIs0ucd0yA44",
-  authDomain: "guidi.vercel.app",
+  authDomain: "exe-frontend.firebaseapp.com",
   projectId: "exe-frontend",
   storageBucket: "exe-frontend.appspot.com",
   messagingSenderId: "962608914145",
